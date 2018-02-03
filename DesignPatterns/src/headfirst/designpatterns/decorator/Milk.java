@@ -1,7 +1,6 @@
 package headfirst.designpatterns.decorator;
 
 public class Milk extends CondimentDecorator {
-    Beverage beverage;
 
     public Milk(Beverage beverage) {
         this.beverage = beverage;
@@ -12,6 +11,6 @@ public class Milk extends CondimentDecorator {
     }
 
     public double cost() {
-        return .10 + beverage.cost();
+        return beverage.cost() + .10;
     }
 }
